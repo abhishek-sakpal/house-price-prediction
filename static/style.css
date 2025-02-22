@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    text-align: left;
+}
+
+input[type="number"] {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.3);
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Prediction Result Styles */
+.prediction-result {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e9f5eb;
+    border-radius: 8px;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    font-size: 18px;
+    font-weight: 600;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="number"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .prediction-result {
+        font-size: 16px;
+    }
+}
